@@ -176,6 +176,7 @@ h1, h2, h3, h4, h5, h6, p {
     rgba(46, 47, 66, 0.7)),
     url(../images/people-office-mobile.jpg);
     max-width: 1440px;
+    margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -465,13 +466,16 @@ h1, h2, h3, h4, h5, h6, p {
     color: #434455;
 }
 /* out portfolio ending */
+
+/* footer begin */
 .footer {
     background-color: #2e2f42;
-    padding: 100px 0;
-    margin: 0;
+    /* padding: 100px 0; */
+    padding: 96px 0;
 }
 .footer-logo {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -480,7 +484,8 @@ h1, h2, h3, h4, h5, h6, p {
     text-transform: uppercase;
     color: #4d5ae5;
     align-items: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: center;
     flex-direction: row;
     gap: 0px;
     margin-bottom: 16px;
@@ -494,7 +499,6 @@ h1, h2, h3, h4, h5, h6, p {
     color: #f4f4fd;
 }
 .footer-text {
-    display: block;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -503,6 +507,9 @@ h1, h2, h3, h4, h5, h6, p {
     width: 264px;
 }
 .p-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -540,40 +547,47 @@ h1, h2, h3, h4, h5, h6, p {
     gap: 16px;
 }
 .fotter-container {
-    margin-right: 120px;
-    
-}.media-link-list-footer {
+    /* margin-right: 120px; */
+    margin-bottom: 72px;
+}
+.media-link-list-footer {
     height: 40px;
     width: 40px;
     display: flex;
 }
 .div-footer-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
 }
 .div-footer {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    margin: 0 auto 72px;
+    /* margin-bottom: 72px; */
 }
 .footer .container {
     display: flex;
     align-items: baseline;
 }
 .form-footer {
-    margin-left: 80px;
+    /* margin-left: 80px; */
 }
 .footer-subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
     margin-bottom: 16px;
 }
 .email-input {
     border: 1px solid #fff;
         border-radius: 4px;
-        width: 264px;
+        min-width: 288px;
         height: 40px;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
         padding-left: 16px;
@@ -582,12 +596,23 @@ h1, h2, h3, h4, h5, h6, p {
         font-size: 12px;
         background-color: #2e2f42;
         color:#fff;
+        opacity: 0.6;
         background-color: transparent;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
+.form-label {
+    opacity: 0.3;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
 .form-class {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* gap: 24px; */
+    gap: 16px;
 }
 input::placeholder{
     color: #fff;
@@ -618,6 +643,9 @@ input::placeholder{
     margin-left: 16px;
     fill: #fff;
 }
+/* footer end */
+
+/* modal begin */
 .backdrop {
     position: fixed;
     top:0;;
@@ -641,13 +669,16 @@ input::placeholder{
     top: 50%;
     left: 50%;
     border-radius: 4px;
-    width: 408px;
-    min-height: 584px;
+    /* width: 408px; */
+    width: 288px;
+    /* min-height: 584px; */
+    min-height: 623px;
     background-color: #fcfcfc;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
     transform: translate(-50%, -50%);
-    padding: 72px 24px 24px 24px;
+    /* padding: 72px 24px 24px 24px; */
+    padding: 72px 16px 24px 16px;
     margin: 0 auto;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -684,6 +715,7 @@ input::placeholder{
     fill: #e7e9fc;
 }
 .p-modal {
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -694,6 +726,7 @@ input::placeholder{
 }
 .div-container {
     margin-bottom: 8px;
+    min-width: 256px;
 }
 .label-modal {
     display: block;
@@ -712,10 +745,11 @@ input::placeholder{
     color: #2e2f42;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 100%;
+    min-width: 256px;
     min-height: 40px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-left: 38px;
+    /* padding-left: 38px; */
+    padding-left: 34px;
     outline: transparent;
     background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -814,6 +848,7 @@ input::placeholder{
         margin: 0 auto;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* modal end */
 
 @media screen and (min-width: 768px) {
     /* header beg */
@@ -897,6 +932,34 @@ input::placeholder{
     .some-portfolio {
         width: calc(100% - 24px) / 2;
     }
+    /* portfolio end */
+
+    /* footer beg */
+    .footer {
+        padding-left: 108px;
+    }
+    .footer-logo {
+        display: inline-block;
+        justify-content: flex-start;
+    }
+    .div-footer {
+        margin-left: 24px;
+        margin-bottom: 0;
+    }
+    .p-footer {
+        justify-content: flex-start;
+    }
+    .footer-subscribe {
+        justify-content: flex-start;
+    }
+    .email-input {
+        min-width: 264px;
+    }
+    .form-class {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+    /* footer end */
 }
 
 @media screen and (min-width: 1158px) {
@@ -1026,6 +1089,15 @@ input::placeholder{
             transform: translateY(0);
         }
         /* portfolio end */
+        /* footer begin */
+        .footer {
+            padding: 100px 0;
+        }
+        .div-footer {
+            margin-left: 120px;
+            margin-right: 80px;
+        }
+        /* footer end */
 }
 /* mobile menu */
 .mobile-menu {
